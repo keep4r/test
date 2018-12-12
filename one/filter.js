@@ -3,11 +3,11 @@ process.stdin.on('readable', function(){
     let chunk = process.stdin.read();
     if (chunk !== null) {
         chunk = chunk.trim();
-        const hex = textToHext(chunk);
+        const hex = textToHex(chunk);
         console.log(`${chunk} | ${hex}`);
     }
 });
-const textToHext = str => {
+const textToHex = str => {
     let hex = "";
     for(let i = 0; i < str.length; ++i) {
         hex += ` ${str.charCodeAt(i).toString(16)}`;
